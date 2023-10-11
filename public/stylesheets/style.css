@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#sj-main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-image: url("../images/back.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#downloadbtn {
+  z-index: 999;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+#left {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  background-color: rgba(165, 42, 42, 0.9);
+  border-radius: 0 20% 20% 0;
+}
+#img {
+  max-height: 90%;
+  max-width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px;
+  box-shadow: inset 0px 0px 20px 4px black;
+  background-color: antiquewhite;
+  border-radius: 15px;
+}
+#img img {
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 0px 20px 4px black;
+}
+#imgform {
+  display: none;
+}
+#right {
+  border-radius: 20% 0px 0px 20%;
+  height: 100%;
+  width: 50%;
+  background-color: rgba(250, 235, 215, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#right h1 {
+  font-family: "bizantheum";
+  font-weight: bold;
+  font-size: 6vw;
+}
+#right > div,
+#right > button {
+  width: 50%;
+  margin-top: 15px;
+}
+#right button {
+  background-color: brown;
+  border-color: brown !important;
+}
+#right div {
+  border-color: brown !important;
+}
+@media (max-width: 600px) {
+  #sj-main {
+    flex-wrap: wrap;
+  }
+  #sj-main > div {
+    height: 50vh;
+    width: 100%;
+  }
+  #sj-main #right h1 {
+    font-size: 12vw;
+  }
+  #img {
+    padding: 30px;
+    box-shadow: inset 0px 0px 10px 2px black;
+  }
+  #right {
+    min-height: 100%;
+    border-radius: 30% 0px 0px 30%;
+  }
+  #right > div,
+  #right > button {
+    width: 80%;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+}
